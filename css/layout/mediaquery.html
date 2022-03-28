@@ -1,0 +1,95 @@
+<!doctype>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            border: 1px solid black;
+        }
+        header {
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            border-top: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .content {
+            display: flex;
+        }
+        .content nav {
+            border-right: 1px solid black;
+        }
+        .content aside {
+            border-left: 1px solid black;
+        }
+        
+        nav, aside {
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+            .content nav, .content aside {
+                border: none;
+                flex-basis: auto;
+            }
+            main {
+                order: -1;
+            }
+            aside {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <header>
+          <h1>Tristone</h1>
+        </header>
+
+        <section class="content">
+          <nav>
+             <ul>
+               <li>Oguri Shun</li>
+               <li>Ayano Go</li>
+               <li>Akaso Eiji</li>
+           </ul>
+          </nav>
+
+          <main>
+              <p>Welcome to Tristone!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ad dolores sapiente provident temporibus molestiae labore enim reiciendis! Necessitatibus ad, quo ducimus quibusdam ut est quaerat consequatur non sunt accusantium cupiditate laborum asperiores sed hic dolores maxime expedita architecto veritatis eligendi fugiat sequi soluta quod voluptates! Nostrum velit quisquam, molestiae porro error debitis saepe accusantium magni illo eligendi. Consequatur exercitationem modi quod dolores mollitia nihil eligendi sint iste assumenda vero omnis quaerat dolorem, sequi sed soluta, accusantium natus suscipit, sapiente fugit illum dolore numquam, reprehenderit possimus voluptatibus! Ullam, quae sunt iste dolorem! Et harum magni delectus hic minima, rerum quaerat.</p>
+          </main>
+
+          <aside>
+              AD
+          </aside>
+
+        </section>
+
+        <footer>
+           <a href="https://www.tristone.co.jp/">공식 홈페이지</a>
+           <a href="https://www.youtube.com/channel/UCyE6kQ-WZOJjYR96tp_f8oA">공식 유튜브</a>
+        </footer>
+    </div>
+</body>
+</html>
